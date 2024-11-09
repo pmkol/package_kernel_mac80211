@@ -4,7 +4,7 @@
  
  	genlmsg_end(msg, hdr);
  
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 12, 0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 11, 4)
 +	genlmsg_multicast_allns(&nl80211_fam, msg, 0,
 +				NL80211_MCGRP_REGULATORY);
 +#else
@@ -20,7 +20,7 @@
  
  	genlmsg_end(msg, hdr);
  
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 12, 0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 11, 4)
 +	genlmsg_multicast_allns(&nl80211_fam, msg, 0,
 +				NL80211_MCGRP_REGULATORY);
 +#else
